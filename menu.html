@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title>Taquilla</title>
+    <link rel="stylesheet" href="css/menu.css">
+  </head>
+  <body>
+
+    <div id="container">
+      <div class="sec" id="sec1">
+        <h1>Nueva Película</h1>
+        <button type="button" class="btn" id="nueva_pelicula" onclick="local(1)">Nueva Película</button>
+      </div>
+
+      <div class="sec" id="sec2">
+        <h1>Calendario</h1>
+        <button type="button" class="btn" id="nueva_pelicula" onclick="local(2)">Calendario</button>
+      </div>
+
+      <div class="sec" id="sec3">
+        <h1>Iniciar Sesión</h1>
+        <button type="button" class="btn" id="nueva_pelicula" onclick="local(3)">Iniciar Sesión</button>
+      </div>
+    </div>
+
+    <div id="logout">
+      <button type="button" onclick="logout()" id="btn-logout">Cerrar Sesión</button>
+    </div>
+
+  </body>
+  <script type="text/javascript">
+  function logout() {
+    localStorage.removeItem("peliculaseleccionada");
+    location.href = "Login.html";
+  }
+
+    function local(x) {
+      if (x == 1) {
+        location.href = "nuevapelicula.html";
+      }
+
+      if (x == 2) {
+        location.href = "calendario.html";
+      }
+
+      if (x == 3) {
+        location.href = "Login.html";
+      }
+    }
+  </script>
+</html>
